@@ -46,21 +46,37 @@ console.table(cars);
 /*----------------------------------------*/
 
 /*------Aufgabe von 020-------*/
-const muster_msg = "   mAx muStErmAnn  -  (Gast)   "; // "Max Mustermann (Gast)"
-console.log(muster_msg);
+// const muster_msg = "   mAx muStErmAnn  -  (Gast)   "; // "Max Mustermann (Gast)"
+// console.log(muster_msg);
 
-const correct_msg1 = muster_msg.trim().trim().toLocaleLowerCase();
-const correct_word1 = correct_msg1.charAt(0).toUpperCase()+correct_msg1.slice(1,3);
-const correct_word2 = correct_msg1.charAt(4).toUpperCase()+correct_msg1.slice(4,13);
-const correct_word3 = correct_msg1.slice(19,20);
-const correct_word4 = correct_msg1.charAt(20).toUpperCase()+correct_msg1.slice(21,25);
+// const correct_msg1 = muster_msg.trim().trim().toLocaleLowerCase();
+// const correct_word1 = correct_msg1.charAt(0).toUpperCase()+correct_msg1.slice(1,3);
+// const correct_word2 = correct_msg1.charAt(4).toUpperCase()+correct_msg1.slice(4,13);
+// const correct_word3 = correct_msg1.slice(19,20);
+// const correct_word4 = correct_msg1.charAt(20).toUpperCase()+correct_msg1.slice(21,25);
 
-const correct_msg = correct_word1 + " " + correct_word2 + " " + correct_word3 + correct_word4 ;
+// const correct_msg = correct_word1 + " " + correct_word2 + " " + correct_word3 + correct_word4 ;
 
-console.log(correct_msg);
+// console.log(correct_msg);
 
 
 /*---------------------------------------- */
+
+
+// Funktionsdeklarierung
+function döner(a) {
+  console.log(a + 12);
+}
+
+// Ausführen der Funktion
+döner("Hello Function");
+döner("Moinsen");
+döner("Hello");
+döner("Döner");
+döner("Pizza Hello");
+döner(5);
+döner(5, 9);
+
 
 
 
