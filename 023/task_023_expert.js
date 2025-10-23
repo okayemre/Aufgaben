@@ -1,5 +1,5 @@
 /* Tag:022!!! Aufgabe 3: Kombinierte Herausforderung – Ein kleines Aufgabenmanagement-Tool*/
-/*
+
 let id_counter = 1;
 
 function create_task(title, description)
@@ -108,7 +108,7 @@ console.log("✅ Completed Tasks:", completed_task);
 const foundTask = get_task_by_id(2);
 console.log("🔍 Task found by ID (2):", foundTask);
 
-*/
+
 
 /************************************************ */
 
