@@ -1,4 +1,4 @@
-//* Tag: 024 Aufgabe 1: Dynamisches Bestandsmanagement für ein Lagerhaus*/
+//* Tag: 023 Aufgabe 1: Dynamisches Bestandsmanagement für ein Lagerhaus*/
 
 const products_list = [
   {
