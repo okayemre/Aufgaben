@@ -3,23 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <title>Calculator with Random Numbers</title>
   </head>
   <body>
-    <h1>This is a Calculater with random numbers</h1>
+    <h1>Calculator with Random Numbers</h1>
 
     <div>
-      <p id="num1">1. Number: </p>
-      <p id="num2">2. Number: </p>      
+      <button id="generate">Number Generator</button>
+    </div>
+
+    <div class="container">
+      <p id="num1">1. Number:</p>
+      <p id="num2">2. Number:</p>
     </div>
 
     <div>
-      <p id="addi">Addition: </p>
-      <p id="sub">Subtraction: </p>
-      <p id="multi">Multiplication: </p>
-      <p id="div">Division: </p>
+      <button id="addi">+</button>
+      <button id="sub">−</button>
+      <button id="multi">×</button>
+      <button id="div">÷</button>
     </div>
 
+    <h2 id="result">Result:</h2>
+
+    <p class="footer">Created by Ronak & Emre</p>
 
     <script src="index.js"></script>
   </body>
