@@ -7,10 +7,14 @@
     <title>Calculator with Random Numbers</title>
   </head>
   <body>
-    <h1>Calculator with Random Numbers</h1>
+    <h1>Random Number Calculator</h1>
+
+    <div id="start_btn">
+      <button id="start">START</button>
+    </div>
 
     <div>
-      <button id="generate">Number Generator</button>
+      <button id="generate" style="display: none">Number Generator</button>
     </div>
 
     <div class="container">
@@ -18,13 +22,29 @@
       <p id="num2">2. Number:</p>
     </div>
 
-    <div>
+    <div id="numbers_btn" style="display: none">
+      <button id="one">1</button>
+      <button id="two">2</button>
+      <button id="three">3</button>
+      <button id="four">4</button>
+      <button id="five">5</button>
+      <button id="six">6</button>
+      <button id="seven">7</button>
+      <button id="eight">8</button>
+      <button id="nine">9</button>
+      <button id="zero">0</button>
+    </div>
+
+    <!--FUNCTIONS-->
+    <div >
       <button id="addi">+</button>
       <button id="sub">−</button>
       <button id="multi">×</button>
       <button id="div">÷</button>
+      <button id="mod">%</button>
+      <button id="power">x^y</button>
     </div>
-
+    
     <h2 id="result">Result:</h2>
 
     <p class="footer">Created by Ronak & Emre</p>
