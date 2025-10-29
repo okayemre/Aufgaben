@@ -47,7 +47,7 @@ h1 {
 /* === NUMBER GENERATOR BUTTON === */
 #generate {
   background-color: #0078ff;
-  color: rgb(21, 180, 228);
+  color: rgb(247, 247, 247);
   border: none;
   padding: 12px 24px;
   font-size: 1em;
@@ -121,6 +121,28 @@ div button:hover {
   background-color: #5a7907;
 }
 
+#power {
+  background-color: #5a7907;
+}
+
+#start_btn {
+  background-color: #0fa027;
+}
+
+#power {
+  background-color: #5a7907;
+}
+
+#power {
+  background-color: #5a7907;
+}
+
+#power {
+  background-color: #5a7907;
+}
+
+
+
 .footer {
   position: fixed;
   bottom: 10px;
@@ -131,6 +153,7 @@ div button:hover {
   opacity: 01;
   transition: opacity 0.3s;
 }
+
 
 /* === RESULT === */
 #result {
@@ -145,4 +168,36 @@ div button:hover {
   font-size: 1.6em;
   font-weight: 600;
 }
+
+#numbers_btn {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#numbers_btn .zero {
+  grid-column: 2;
+  width: 60px;
+}
+
+#numbers_btn button {
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  aspect-ratio: 1 / 1;
+}
+
+#numbers_btn button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
 

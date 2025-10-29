@@ -7,36 +7,48 @@
     <title>Calculator with Random Numbers</title>
   </head>
   <body>
-    <h1>Random Number Calculator</h1>
+    <h1>Super Calculator</h1>
 
     <div id="start_btn">
       <button id="start">START</button>
     </div>
 
+    <br />
+    <!--Inputs Modes-->
+    <div id="input_nums" style="display: none">
+      <button id="input-prompt">Prompt Input</button>
+      <button id="input-button">Button Input</button>
+      <button id="input-random">Random Mode</button>
+    </div>
+
+    <br />
     <div>
       <button id="generate" style="display: none">Number Generator</button>
     </div>
 
+    <br />
+    <!--Numbers Buttons-->
+    <div id="numbers_btn" style="display: none">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="zero">0</button>
+    </div>
+
+    <!--Numbers-->
     <div class="container">
       <p id="num1">1. Number:</p>
       <p id="num2">2. Number:</p>
     </div>
 
-    <div id="numbers_btn" style="display: none">
-      <button id="one">1</button>
-      <button id="two">2</button>
-      <button id="three">3</button>
-      <button id="four">4</button>
-      <button id="five">5</button>
-      <button id="six">6</button>
-      <button id="seven">7</button>
-      <button id="eight">8</button>
-      <button id="nine">9</button>
-      <button id="zero">0</button>
-    </div>
-
-    <!--FUNCTIONS-->
-    <div >
+    <!--Functions-->
+    <div>
       <button id="addi">+</button>
       <button id="sub">−</button>
       <button id="multi">×</button>
@@ -44,8 +56,12 @@
       <button id="mod">%</button>
       <button id="power">x^y</button>
     </div>
-    
+
     <h2 id="result">Result:</h2>
+
+    <div>
+      <button id="reset">RESET</button>
+    </div>
 
     <p class="footer">Created by Ronak & Emre</p>
 

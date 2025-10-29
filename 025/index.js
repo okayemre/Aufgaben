@@ -1,18 +1,15 @@
 const number1 = document.querySelector("#num1");
 const number2 = document.querySelector("#num2");
 const result = document.querySelector("#result");
-const numbers_buttons = document.querySelector("#numbers_btn");
-
-
-const btn_1 = document.querySelector("#one");
-const btn_2 = document.querySelector("#two");
 
 const start_button = document.querySelector("#start");
+const reset_button = document.querySelector("#reset");
+const input_prompt = document.querySelector("#input-prompt");
+const input_button = document.querySelector("#input-button");
+const input_random = document.querySelector("#input-random");
+const number_buttons = document.querySelectorAll("#numbers_btn button");
 
-
-
-const trigger = document.querySelector("#generate");
-
+const generator = document.querySelector("#generate");
 const add_numbers = document.querySelector("#addi");
 const sub_numbers = document.querySelector("#sub");
 const multi_numbers = document.querySelector("#multi");
@@ -20,58 +17,62 @@ const div_numbers = document.querySelector("#div");
 const mod_numbers = document.querySelector("#mod");
 const power_numbers = document.querySelector("#power");
 
-let num1;
-let num2;
+let num1 ="";
+let num2 ="";
 
-start_button.addEventListener("click", () => 
-{
-  let mode;
-  let enter_numbers;
+/*----START----*/
+start_button.addEventListener("click", () => {
+  input_nums.style.display = "block";
+});
 
-  if (confirm("Choose how to set the numbers:\n\n 🟢 Enter manually --> Click OK \n 🔵 Generate randomly --> Click Cancel or Abbrechen")) 
-  {
-    mode = "manual";
-  } 
-  else 
-  {
-    mode = "random";
-  }
+input_prompt.addEventListener("click", () => {
+  numbers_btn.style.display = "none";  
 
-  if (mode == "manual") 
-  {
-    if(confirm("Choose how to enter the numbers:\n\n Prompt --> Click OK \n Buttons --> Click Cancel or Abbrechen"))
-    {
-      enter_numbers ="prompt";
-      num1 = Number(prompt("Enter 1. Number:"));
-      num2 = Number(prompt("Enter 2. Number:"));
+  num1 = Number(prompt("Enter 1. Number:"));
+  num2 = Number(prompt("Enter 2. Number:"));
 
-      number1.innerText = "1. Number: " + num1;
-      number2.innerText = "2. Number: " + num2;
-    }
-    else
-    {
-      numbers_buttons.style.display = "block";
-      num1 = Number(btn_1 + btn_2);
-      num2 = Number(btn_1 + btn_2);
-    }
-  } 
-  else if(mode == "random")
-  {
-    trigger.style.display = "block";
-    trigger.addEventListener("click", () => 
-    {
-      num1 = Math.floor(Math.random() * 100);
-      num2 = Math.floor(Math.random() * 100);
+  number1.innerText = "1. Number: " + num1;
+  number2.innerText = "2. Number: " + num2;
+});
 
-      number1.innerText = "1. Number: " + num1;
-      number2.innerText = "2. Number: " + num2;
-      result.innerText = "Result: ";
+input_button.addEventListener("click", () => {
+  alert("!!! Enter two digits only. \n\n Use 0 at the beginning for single-digit numbers (e.g., 05).");
+
+  numbers_btn.style.display = "grid";
+
+  let input_val = "";
+  let current_num = 1;
+
+  for (let i = 0; i < number_buttons.length; i++) {
+    number_buttons[i].addEventListener("click", () => {
+      input_val += number_buttons[i].innerText;
+
+      if (input_val.length === 2) {
+        if (current_num === 1) {
+          num1 = Number(input_val);
+          number1.innerText = "1. Number: " + num1;
+          input_val = "";
+          current_num = 2;
+        } else {
+          num2 = Number(input_val);
+          number2.innerText = "2. Number: " + num2;
+          input_val = "";
+          numbers_btn.style.display = "none";
+        }
+      }
     });
   }
-  else
-  {
-    trigger.style.display = "block"; 
-  }
+});
+
+input_random.addEventListener("click", () => {
+  numbers_btn.style.display = "none";
+  generator.style.display = "block";
+  generator.addEventListener("click", () => {
+    num1 = Math.floor(Math.random() * 100);
+    num2 = Math.floor(Math.random() * 100);
+    number1.innerText = "1. Number: " + num1;
+    number2.innerText = "2. Number: " + num2;
+  });
 });
 
 add_numbers.addEventListener("click", () => {
@@ -102,35 +103,16 @@ power_numbers.addEventListener("click", () => {
   result.innerText = `Result: ${Math.pow(num1, num2)}`;
 });
 
-// const num1 =  Math.floor(Math.random() * (100 - 1));
+reset_button.addEventListener("click", () => {
+  input_nums.style.display = "none";
+  generator.style.display = "none";
+  numbers_btn.style.display = "none";
 
-// //   setTimeout(() => {
-// //   console.log("Delayed for 1 second.");
-// // }, "1000");
+  number1.innerText = "1. Number:";
+  number2.innerText = "2. Number:";
+  result.innerText = "Result:";
 
-// // return random_num1;
-// // };
+  num1 = "";
+  num2 = "";
+});
 
-// // num1();
-
-// const num2 = Math.floor(Math.random() * (100 - 1));
-
-// number1.innerText += " "+ num1;
-// number2.innerText += " "+ num2;
-
-//const add = (num1, num2) => num1 + num2 ;
-//const sub = (num1, num2) => num1 - num2;
-//const multi = (num1, num2) => num1 * num2;
-//const div = (num1, num2) => (num1 / num2).toFixed(2);
-
-// function add_func(num1, num2)
-// {
-//   return num1 + num2
-// };
-
-// add_numbers.innerText += " " + add_func(num1, num2);
-
-// add_numbers.innerText += " " + add(num1, num2);
-// sub_numbers.innerText += " " + sub(num1, num2);
-// multi_numbers.innerText += " " + multi(num1, num2);
-// div_numbers.innerText += " " + div(num1, num2);
