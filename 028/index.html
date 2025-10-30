@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Guess the Number, Win the Points!</h1>
+
+    <div id="game_area_container">
+      <button id="start_game">Start Game</button>
+    </div>
+
+    <div id="game_info_container" style="display: none">
+      <ul>
+        <h3>Game Instructions</h3>
+        <li>Enter how many points you want to win (between 1 and 50).</li>
+        <li>Choose a number between 1 and 100.</li>
+        <li>Click the Play button.</li>
+        <li>The game will generate a random number between 1 and 100.</li>
+        <li>
+          If your number is close enough to the random number (within your
+          chosen point range), you win!
+        </li>
+        <li>Otherwise, you lose. Try again!</li>
+      </ul>
+    </div>
+
+    <div id="play_container" style="display: none">
+      <button id="play_game">Let's Play!</button>
+    </div>
+
+    <br />
+
+    <div id="input_area" style="display: none">
+      <label for="points">Points to Win (1-50): </label>
+      <input type="number" id="points" name="points" min="1" max="50" />
+      <br /><br />
+      <label for="user_number">Your Number (1-100): </label>
+      <input
+        type="number"
+        id="user_number"
+        name="user_number"
+        min="1"
+        max="100"
+      />
+      <br /><br />
+    </div>
+
+    <div id="play_game_container" style="display: none">
+      <button id="play_game">Play</button>
+    </div>
+
+    <div id="number_generator_container">
+      <button id="number_generator" style="display: none">
+        Number Generator
+      </button>
+    </div>
+
+    <div id="result_area">
+      <h2 id="random_number_display" style="display: none">Random Number:</h2>
+      <h2 id="game_result" style="display: none">Result:</h2>
+    </div>
+
+    <div id="reset_container" >
+      <button id="restart_game" style="display: none">Play Again</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+/* ---- GENERAL PAGE STYLING ---- */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 30px;
+  color: #ffea00;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
+}
+
+/* ---- GAME INSTRUCTIONS ---- */
+#game_info_container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#game_info_container h3 {
+  color: #ffea00;
+  margin-bottom: 10px;
+}
+
+#game_info_container li {
+  text-align: left;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* ---- BUTTONS ---- */
+button {
+  background: #ffea00;
+  color: #222;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: #fff176;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ---- INPUT AREA ---- */
+#input_area {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+label {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+input[type="number"] {
+  padding: 8px;
+  width: 100px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* ---- RANDOM NUMBER + RESULT ---- */
+#random_number_display {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  color: #ffea00;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+}
+
+#game_result {
+  font-size: 1.8rem;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+/* Success and fail animation colors */
+#game_result:contains("Congratulations") {
+  color: #00e676;
+}
+
+#game_result:contains("Sorry") {
+  color: #ff5252;
+}
+
+/* ---- RESET BUTTON ---- */
+#restart_game {
+  background: #00e676;
+  color: #000;
+}
+
+#restart_game:hover {
+  background: #69f0ae;
+}
+
+/* ---- RESPONSIVE DESIGN ---- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  button {
+    width: 80%;
+    font-size: 1rem;
+  }
+  #input_area {
+    width: 90%;
+  }
+}
+/* ---- ADDITIONAL STYLING ---- */
+#game_area, #game_info {
+  display: none;
+} 
+#play_container {
+  margin-top: 20px;
+}
+#reset_container {
+  margin-top: 20px;
+}
+#reset_container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
