@@ -55,7 +55,7 @@ generator_button.addEventListener("click", () => {
   let user_number = Number(document.getElementById("user_number").value);
 
   if (
-    random_number >= user_number - (50 - points) ||
+    random_number >= user_number - (50 - points) &&
     random_number <= user_number + (50 - points)
   ) {
     game_result.style.display = "block";
